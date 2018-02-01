@@ -17,5 +17,10 @@ class CellTest(unittest.TestCase):
         cell.mark_o()
         self.assertEqual("O", cell.symbol)
 
+    def test_cell_position(self):
+        cell = Cell(1,1)
+        self.assertEqual(1, cell.row)
+        self.assertEqual(1, cell.column)
+
 if __name__ == '__main__':
     unittest.main()
