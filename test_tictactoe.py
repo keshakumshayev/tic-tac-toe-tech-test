@@ -24,5 +24,11 @@ class TicTacToeTest(unittest.TestCase):
         self.assertEqual(3, game.board[8].row)
         self.assertEqual(3, game.board[8].column)
 
+    def test_x_starts(self):
+        game = TicTacToe()
+        self.assertEqual("X", game.current_player)
+
+
+
 if __name__ == '__main__':
     unittest.main()
