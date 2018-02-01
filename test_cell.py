@@ -4,16 +4,16 @@ from cell import Cell
 
 class CellTest(unittest.TestCase):
     def test_cell_initialized_empty(self):
-        cell = Cell()
+        cell = Cell(1,1)
         self.assertEqual("", cell.symbol)
 
     def test_cell_mark_x(self):
-        cell = Cell()
+        cell = Cell(1,1)
         cell.mark_x()
         self.assertEqual("X", cell.symbol)
 
     def test_cell_mark_o(self):
-        cell = Cell()
+        cell = Cell(1,1)
         cell.mark_o()
         self.assertEqual("O", cell.symbol)
 

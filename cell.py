@@ -1,6 +1,8 @@
 class Cell:
-    def __init__(self):
+    def __init__(self, row, column):
         self.symbol = ""
+        self.row = row
+        self.column = column
 
     def mark_x(self):
         self.symbol = "X"
