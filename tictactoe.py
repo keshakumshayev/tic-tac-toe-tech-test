@@ -13,3 +13,4 @@ class TicTacToe:
             Cell(3,2),
             Cell(3,3)
         ]
+        self.current_player = "X"
