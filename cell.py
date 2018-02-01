@@ -4,3 +4,6 @@ class Cell:
 
     def mark_x(self):
         self.symbol = "X"
+
+    def mark_o(self):
+        self.symbol = "O"
