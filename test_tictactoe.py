@@ -26,7 +26,17 @@ class TicTacToeTest(unittest.TestCase):
 
     def test_x_starts(self):
         game = TicTacToe()
-        self.assertEqual("X", game.current_player)
+        self.assertEqual("X", game.turn_player)
+
+    def test_turn_player_marks_cell(self):
+        game = TicTacToe()
+        position = [1,1]
+        game.mark(position[0],position[1])
+        cell_marked_index = (position[0]-1)*3+position[1]
+        self.assertEqual(game.turn_player, game.board[cell_marked_index].symbol)
+
+
+
 
 
 
