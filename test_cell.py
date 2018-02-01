@@ -7,5 +7,10 @@ class CellTest(unittest.TestCase):
         cell = Cell()
         self.assertEqual("", cell.symbol)
 
+    def test_cell_checked_x(self):
+        cell = Cell()
+        cell.mark_x()
+        self.assertEqual("X", cell.symbol)
+
 if __name__ == '__main__':
     unittest.main()
