@@ -35,13 +35,6 @@ class TicTacToeTest(unittest.TestCase):
         game.mark(row,column)
         self.assertEqual("X", game.cell(row, column).symbol)
 
-    def test_cell_marked(self):
-        game = TicTacToe()
-        row = 1
-        column = 1
-        game.mark(row,column)
-        self.assertEqual(True, game.cell(row, column).marked())
-
 
 
 

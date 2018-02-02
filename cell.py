@@ -9,3 +9,6 @@ class Cell:
 
     def mark_o(self):
         self.symbol = "O"
+
+    def marked(self):
+        return self.symbol != ""

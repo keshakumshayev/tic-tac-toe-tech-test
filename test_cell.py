@@ -22,5 +22,11 @@ class CellTest(unittest.TestCase):
         self.assertEqual(1, cell.row)
         self.assertEqual(1, cell.column)
 
+    def test_cell_marked(self):
+        cell = Cell(1,1)
+        self.assertEqual(False, cell.marked())
+        cell.mark_o()
+        self.assertEqual(True, cell.marked())
+
 if __name__ == '__main__':
     unittest.main()
