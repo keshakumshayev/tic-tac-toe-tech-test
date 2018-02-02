@@ -35,9 +35,13 @@ class TicTacToeTest(unittest.TestCase):
         game.mark(row,column)
         self.assertEqual("X", game.cell(row, column).symbol)
 
-
-
-
+    def test_cannot_mark_already_marked_cell(self):
+        game = TicTacToe()
+        row = 1
+        column = 1
+        game.mark(row,column)
+        game.mark(row,column)
+        self.assertEqual("X", game.cell(row, column).symbol)
 
 
 if __name__ == '__main__':
