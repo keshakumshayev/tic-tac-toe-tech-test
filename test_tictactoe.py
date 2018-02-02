@@ -43,6 +43,13 @@ class TicTacToeTest(unittest.TestCase):
         game.mark(row,column)
         self.assertEqual("X", game.cell(row, column).symbol)
 
+    def test_win_condition(self):
+        game = TicTacToe()
+        self.assertEqual([[[1,1],[1,2],[1,3]],[[2,1],[2,2],[2,3]],[[3,1],[3,2],[3,3]],
+                        [[1,1],[2,1],[3,1]],[[1,2],[2,2],[3,2]],[[3,1],[3,2],[3,3]],
+                        [[1,1],[2,2],[3,3]],[[1,3],[2,2],[3,1]]],
+                         game.win_combinations)
+
 
 if __name__ == '__main__':
     unittest.main()

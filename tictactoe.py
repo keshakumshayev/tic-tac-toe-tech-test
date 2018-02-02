@@ -19,6 +19,8 @@ class TicTacToe:
         if self.cell(row, column).marked() == False:
             self.cell(row, column).symbol = self.turn_player
             self.turn_player = "O" if self.turn_player == "X" else "X"
+        else:
+            print("Try marking an empty square")
 
     def cell(self, row, column):
         return self.board[(row-1)*3+column]
