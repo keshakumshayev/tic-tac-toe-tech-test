@@ -56,6 +56,14 @@ class TicTacToeTest(unittest.TestCase):
             [[1,3],[2,2],[3,1]]
         ], game.win_combinations)
 
+    def test_game_complete(self):
+        game = TicTacToe()
+        game.mark(*game.win_combinations[0][0])
+        game.mark(*game.win_combinations[1][0])
+        game.mark(*game.win_combinations[0][1])
+        game.mark(*game.win_combinations[1][2])
+        game.mark(*game.win_combinations[0][2])
+        self.assertEqual(True, game.game_complete())
 
 if __name__ == '__main__':
     unittest.main()
