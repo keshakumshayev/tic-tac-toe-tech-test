@@ -14,3 +14,10 @@ class TicTacToe:
             Cell(3,3)
         ]
         self.turn_player = "X"
+
+    def mark(self, row, column):
+        self.cell(row, column).symbol = self.turn_player
+        self.turn_player = "O" if self.turn_player == "X" else "X"
+
+    def cell(self, row, column):
+        return self.board[(row-1)*3+column]
