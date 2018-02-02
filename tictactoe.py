@@ -16,8 +16,9 @@ class TicTacToe:
         self.turn_player = "X"
 
     def mark(self, row, column):
-        self.cell(row, column).symbol = self.turn_player
-        self.turn_player = "O" if self.turn_player == "X" else "X"
+        if self.cell(row, column).marked() == False:
+            self.cell(row, column).symbol = self.turn_player
+            self.turn_player = "O" if self.turn_player == "X" else "X"
 
     def cell(self, row, column):
         return self.board[(row-1)*3+column]
